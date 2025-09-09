@@ -1,0 +1,45 @@
+:root{
+	--bg:#f7f7fb;
+	--card:#ffffff;
+	--muted:#666;
+	--green:#21a179;
+	--orange:#f5a623;
+	--red:#e53935;
+	--accent:#5b6cff;
+}
+*{box-sizing:border-box}
+body{
+	font-family:Segoe UI, Roboto, Arial, sans-serif;
+	background:var(--bg);
+	margin:0;
+	color:#111;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	height:100vh;
+}
+.container{
+	width:360px;
+	background:var(--card);
+	padding:20px;
+	border-radius:12px;
+	box-shadow:0 8px 24px rgba(16,24,40,0.08);
+}
+h1{margin:0 0 12px 0;font-size:20px}
+.controls{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.buttons button{margin-right:8px;padding:8px 10px;border-radius:8px;border:1px solid #ddd;background:#fff;cursor:pointer}
+.buttons button:last-child{margin-right:0}
+.buttons button:hover{transform:translateY(-2px)}
+.reset{background:transparent;border:1px solid #ccc;padding:8px 12px;border-radius:8px;cursor:pointer}
+.status{font-size:14px}
+.total{font-weight:600;margin-bottom:6px}
+.limit{color:var(--muted);margin-bottom:8px}
+.progress-wrap{width:100%;height:18px;background:#eee;border-radius:999px;overflow:hidden}
+.progress{height:100%;width:0%;background:linear-gradient(90deg,var(--green),#76d6b5);transition:width 300ms ease,background 200ms ease}
+.progress.green{background:linear-gradient(90deg,var(--green),#76d6b5)}
+.progress.orange{background:linear-gradient(90deg,var(--orange),#ffc17a)}
+.progress.red{background:linear-gradient(90deg,var(--red),#ff8a80)}
+.message{margin-top:10px;font-size:13px;color:var(--muted)}
+
+/* small responsive tweak */
+@media (max-width:380px){.container{width:320px}}
